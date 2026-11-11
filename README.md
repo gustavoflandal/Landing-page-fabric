@@ -26,6 +26,8 @@ python3 -m http.server 8000
 # depois abra http://localhost:8000
 ```
 
+Repositório: https://github.com/gustavoflandal/Landing-page-fabric
+
 O deploy na VPS está em [DEPLOY.md](DEPLOY.md).
 
 ## Como as telas são capturadas

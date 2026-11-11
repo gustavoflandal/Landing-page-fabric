@@ -18,7 +18,7 @@ nginx próprio, atrás do Caddy que já atende 80/443 na VPS — o mesmo desenho
 
 ```bash
 cd /opt
-git clone <url-do-repositorio-desta-landing> fabric-landing
+git clone https://github.com/gustavoflandal/Landing-page-fabric.git fabric-landing
 cd /opt/fabric-landing
 
 docker compose up -d --build
