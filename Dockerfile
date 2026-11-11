@@ -3,7 +3,8 @@
 # compose, documentação e script de captura não acabem publicados junto.
 FROM nginx:1.27-alpine
 
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf     /etc/nginx/conf.d/default.conf
+COPY seguranca.conf /etc/nginx/conf.d/seguranca.conf
 
 COPY index.html estilo.css visor.js /usr/share/nginx/html/fabric/
 COPY fontes/ /usr/share/nginx/html/fabric/fontes/
