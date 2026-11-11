@@ -15,7 +15,7 @@
 <body>
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<svg class="simbolos" width="0" height="0" aria-hidden="true">
   <symbol id="fabric-logo" viewBox="0 0 28 28">
     <rect x="1.5" y="1.5" width="10" height="10" rx="2.5" fill="currentColor"/>
     <rect x="16.5" y="1.5" width="10" height="10" rx="2.5" fill="currentColor"/>
@@ -61,7 +61,7 @@
         <a class="botao secundario" href="/login">Acessar o sistema</a>
       </div>
     </div>
-    <figure class="destaque" style="margin:0">
+    <figure class="destaque sem-margem">
       <a class="quadro hero-tela" href="img/telas/02-pcp-dashboard.webp" data-legenda="Painel do PCP — eficiência, refugo, ordens atrasadas e produção diária">
         <span class="barra"><i></i><i></i><i></i></span>
         <img src="img/telas/02-pcp-dashboard.webp" width="1440" height="900" alt="Painel do PCP do Fabric, com indicadores de eficiência, refugo e produção diária" loading="eager" decoding="async">
@@ -682,7 +682,7 @@
 <!-- ── CTA final ───────────────────────────────────────────── -->
 <section class="cta-final" aria-labelledby="t-cta">
   <div class="container">
-    <p class="sobretitulo" style="color:rgba(255,255,255,.5)">Pronto para começar</p>
+    <p class="sobretitulo claro">Pronto para começar</p>
     <h2 id="t-cta">Controle total da operação em um único sistema</h2>
     <p>Instalação on-premise na sua infraestrutura. Uma instalação, um banco, os seus dados. Entre em contato para conhecer os detalhes.</p>
     <div class="acoes">
@@ -713,18 +713,6 @@
   </div>
 </footer>
 
-<script>
-/* Smooth scroll para links internos com offset do topo sticky */
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
-});
-</script>
 
 <dialog id="visor" aria-label="Visualizador de telas">
   <button class="fechar" type="button" aria-label="Fechar">&times;</button>

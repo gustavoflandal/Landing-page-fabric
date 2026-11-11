@@ -339,6 +339,13 @@ h2 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: clamp(1.
 
 @media print { .topo { display: none !important; } .bloco { padding: 24px 0; } }
 
+/* Classes que substituem atributos style= inline: o CSP (style-src 'self')
+   bloqueia estilo inline, e um atributo style some sem aviso na página
+   publicada. */
+.simbolos { position: absolute; }
+.destaque.sem-margem { margin: 0; }
+.sobretitulo.claro { color: rgba(255,255,255,.5); }
+
 /* ── Catálogo de telas ────────────────────────────────────────── */
 .catalogo-intro { display: flex; flex-wrap: wrap; gap: 16px; align-items: baseline; justify-content: space-between; margin-bottom: 36px; }
 .catalogo-intro p { margin: 0; color: var(--tinta-suave); max-width: 52em; }
