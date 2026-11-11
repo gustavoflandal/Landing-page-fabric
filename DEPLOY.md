@@ -7,7 +7,7 @@ nginx próprio, atrás do Caddy que já atende 80/443 na VPS — o mesmo desenho
 | | |
 |---|---|
 | Contêiner | `fabric-landing` |
-| Porta local | `127.0.0.1:8092` (só para teste dentro da VPS) |
+| Porta local | `127.0.0.1:8093` (só para teste dentro da VPS) |
 | Rede do proxy | `syncrofin-pessoal_default` (externa) |
 | Proxy | `syncrofin-pessoal-caddy-1` |
 
@@ -24,7 +24,7 @@ cd /opt/fabric-landing
 docker compose up -d --build
 
 echo "=== TESTE LOCAL (espera 200) ==="
-curl -sI http://127.0.0.1:8092/fabric/ | head -3
+curl -sI http://127.0.0.1:8093/fabric/ | head -3
 
 echo "=== O CADDY ENXERGA O CONTÊINER? (espera 200) ==="
 docker exec syncrofin-pessoal-caddy-1 \

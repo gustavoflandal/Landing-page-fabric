@@ -1,7 +1,7 @@
 # O catálogo sobe num contêiner próprio e entra na rede do proxy que já atende
-# 80/443 na VPS. A porta local (8092) existe só para testar de dentro do
-# servidor; quem publica para fora é o proxy. 8090 é do pdv-lev, 8091 do
-# enterprise.
+# 80/443 na VPS. A porta local (8093) existe só para testar de dentro do
+# servidor; quem publica para fora é o proxy. As anteriores já estão tomadas:
+# 8090 pdv-lev, 8091 enterprise, 8092 alcance.
 services:
   fabric-landing:
     build: .
@@ -9,7 +9,7 @@ services:
     container_name: fabric-landing
     restart: unless-stopped
     ports:
-      - "127.0.0.1:8092:80"
+      - "127.0.0.1:8093:80"
     logging:
       driver: json-file
       options:
