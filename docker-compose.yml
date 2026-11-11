@@ -1,0 +1,25 @@
+# O catálogo sobe num contêiner próprio e entra na rede do proxy que já atende
+# 80/443 na VPS. A porta local (8092) existe só para testar de dentro do
+# servidor; quem publica para fora é o proxy. 8090 é do pdv-lev, 8091 do
+# enterprise.
+services:
+  fabric-landing:
+    build: .
+    image: fabric-landing:latest
+    container_name: fabric-landing
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8092:80"
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      - default
+      - proxy
+
+networks:
+  proxy:
+    external: true
+    name: syncrofin-pessoal_default
